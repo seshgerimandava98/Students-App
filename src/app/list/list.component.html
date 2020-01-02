@@ -1,0 +1,26 @@
+<div class="box">
+    <table class="table table-striped" style="
+    border: 1px black groove; border-collapse: collapse;">
+        <thead class="style-table">
+            <tr class="table-tr"><td colspan="4"><b>Students Result Board</b></td></tr>
+            <tr>
+                <th><i>Student Name</i></th>
+                <th><i>Roll Number</i></th>
+                <th><i>Total Marks</i></th>
+                <th><i>Status</i></th>
+            </tr>
+        </thead>
+        <tbody class="style-table">
+            <tr class="table-row" *ngFor="let student of studentDetails; let i = index" [ngClass]="{
+                'text-success': marks[i] < 100,
+                'text-danger': marks[i] > 120 }">
+                <td>{{student.name}}</td>
+                <td>{{student.rollNumber}}</td>
+                <td>{{student.marks.Maths + student.marks.English + student.marks.Science}}</td>
+                <td *ngIf = "marks[i] < 100">FAIL</td>
+                <td *ngIf = "marks[i] > 100 && marks[i] < 120">PASS</td>
+                <td *ngIf = "marks[i] > 120">TOPPER</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

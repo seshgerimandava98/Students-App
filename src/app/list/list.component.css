@@ -1,0 +1,22 @@
+.box {
+    display: block;
+    margin-left: 10%;
+    margin-right: auto;
+    margin-top: 12%;
+     width: 40%;
+     text-align: center;
+   }
+   
+.text-success {
+    color: rgb(17, 197, 17);
+}
+.text-danger {
+    color: red;
+}
+.style-table {
+    border-collapse: collapse; border: 2px black groove;background-color: white;
+}
+.table-tr {
+    text-align: center;
+    border: 2px black groove; border-collapse: collapse;
+}

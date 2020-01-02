@@ -1,0 +1,56 @@
+<div class="box">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>Login</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="example-form" [formGroup]="loginForm">
+                <table class="example-full-width" cellspacing="0">
+                    <tr>
+                        <td> 
+                            <mat-form-field class="example-full-width">
+                                <input matInput autocomplete="off" placeholder="Name" formControlName="name" name="username" required>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <mat-form-field class="example-full-width">
+                                <input matInput autocomplete="off" placeholder="Last Name" formControlName="lastName" type="text"
+                                    name="lastName" required>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <mat-form-field class="example-full-width">
+                                <input matInput autocomplete="off" placeholder="Class" formControlName="class" type="text"
+                                    name="Class" required>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <mat-form-field class="example-full-width">
+                                <input matInput autocomplete="off" placeholder="Year" formControlName="year" type="text"
+                                    name="Year" required>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <mat-form-field class="example-full-width">
+                                <input matInput autocomplete="off" placeholder="Percentage" formControlName="percentage" type="text"
+                                    name="Percentage" required>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button (click)="login()" color="primary">Login</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -1,0 +1,65 @@
+[
+    {
+        "name":"rajiv",
+        "marks":{
+            "Maths":18,
+            "English":21,
+            "Science":45
+        },
+        "rollNumber":"KV2017-5A2"
+    },
+    {
+        "name":"abhishek",
+        "marks":{
+            "Maths":43,
+            "English":30,
+            "Science":37
+        },
+        "rollNumber":"KV2017-5A1"
+    },
+    {
+        "name":"zoya",
+        "marks":{
+            "Maths":42,
+            "English":31,
+            "Science":50
+        },
+        "rollNumber":"KV2017-5A3"
+    },
+    {
+        "name":"abhay",
+        "marks":{
+            "Maths": 60,
+            "English": 40,
+            "Science": 47
+        },
+        "rollNumber":"KV2017-7C1"
+    },
+    {
+        "name":"rehana",
+        "marks":{
+            "Maths": 2,
+            "English": 61,
+            "Science": 10
+        },
+        "rollNumber":"KV2017-10C3"
+    },
+    {
+        "name":"parshya",
+        "marks":{
+            "Maths": 73,
+            "English": 40,
+            "Science": 17
+        },
+        "rollNumber":"KV2017-9B1"
+    },
+    {
+        "name":"seshu",
+        "marks":{
+            "Maths": 52,
+            "English": 41,
+            "Science": 20
+        },
+        "rollNumber":"KV2017-10A3"
+    }
+]

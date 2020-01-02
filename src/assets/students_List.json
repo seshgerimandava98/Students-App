@@ -1,0 +1,23 @@
+[
+    {
+        "name":"rajiv",
+        "lastName": "kovvuri",
+        "class":"9A",
+        "year": "2011",
+        "percentage": "81"
+    },
+    {
+        "name":"abhishek",
+        "lastName": "Madhyam",
+        "class":"9B",
+        "year": "2017",
+        "percentage": "91"
+    },
+    {
+        "name":"zoya",
+        "lastName": "Shaik",
+        "class":"8A",
+        "year": "2018",
+        "percentage": "76"
+    }
+]
