@@ -1,32 +1,57 @@
 <div class="box">
     <mat-card class="example-card">
-        <mat-card-header>
-            <mat-card-title>Login</mat-card-title>
+        <mat-card-header style="padding-left: 19%;">
+            <mat-card-title>ADMISSION DETAILS</mat-card-title>
         </mat-card-header>
         <mat-card-content>
             <form class="example-form" [formGroup]="loginForm">
                 <table class="example-full-width" cellspacing="0">
                     <tr>
-                        <td> 
+                        <td>
                             <mat-form-field class="example-full-width">
-                                <input matInput autocomplete="off" placeholder="Name" formControlName="name" name="username" required>
+                                <input matInput autocomplete="off" placeholder="Name" formControlName="name"
+                                    name="username" required>
                             </mat-form-field>
+                            <mat-error
+                                *ngIf="loginForm.controls.name.hasError('pattern') && !loginForm.controls.name.hasError('required')">
+                                Please enter a valid name in alphabets
+                            </mat-error>
+                            <mat-error
+                                *ngIf="loginForm.controls.name.hasError('required') && loginForm.controls.name.touched">
+                                Name is <strong>required</strong>
+                            </mat-error>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <mat-form-field class="example-full-width">
-                                <input matInput autocomplete="off" placeholder="Last Name" formControlName="lastName" type="text"
-                                    name="lastName" required>
+                                <input matInput autocomplete="off" placeholder="Last Name" formControlName="lastName"
+                                    type="text" name="lastName" required>
                             </mat-form-field>
+                            <mat-error
+                                *ngIf="loginForm.controls.lastName.hasError('pattern') && !loginForm.controls.lastName.hasError('required')">
+                                Please enter a valid lastName in alphabets
+                            </mat-error>
+                            <mat-error
+                                *ngIf="loginForm.controls.lastName.hasError('required') && loginForm.controls.lastName.touched">
+                                Last Name is <strong>required</strong>
+                            </mat-error>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <mat-form-field class="example-full-width">
-                                <input matInput autocomplete="off" placeholder="Class" formControlName="class" type="text"
-                                    name="Class" required>
+                                <input matInput autocomplete="off" placeholder="Class" formControlName="class"
+                                    type="text" name="Class" required>
                             </mat-form-field>
+                            <mat-error
+                                *ngIf="loginForm.controls.class.hasError('pattern') && !loginForm.controls.class.hasError('required')">
+                                Please enter a valid class with out special characters
+                            </mat-error>
+                            <mat-error
+                                *ngIf="loginForm.controls.class.hasError('required') && loginForm.controls.class.touched">
+                                class is <strong>required</strong>
+                            </mat-error>
                         </td>
                     </tr>
                     <tr>
@@ -35,14 +60,33 @@
                                 <input matInput autocomplete="off" placeholder="Year" formControlName="year" type="text"
                                     name="Year" required>
                             </mat-form-field>
+                            <mat-error
+                                *ngIf="loginForm.controls.year.hasError('pattern') && !loginForm.controls.year.hasError('required')">
+                                Please enter a valid year in numbers
+                            </mat-error>
+                            <mat-error
+                                *ngIf="loginForm.controls.year.hasError('required') && loginForm.controls.year.touched">
+                                year is <strong>required</strong>
+                            </mat-error>
+                            <mat-error *ngIf="loginForm.controls.year.hasError('Range')">
+                                year should be less than <strong>2017</strong>
+                            </mat-error>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <mat-form-field class="example-full-width">
-                                <input matInput autocomplete="off" placeholder="Percentage" formControlName="percentage" type="text"
-                                    name="Percentage" required>
+                                <input matInput autocomplete="off" placeholder="Percentage" formControlName="percentage"
+                                    type="text" name="Percentage" required>
                             </mat-form-field>
+                            <mat-error
+                                *ngIf="loginForm.controls.percentage.hasError('pattern') && !loginForm.controls.percentage.hasError('required')">
+                                Please enter a valid percentage in numbers
+                            </mat-error>
+                            <mat-error
+                                *ngIf="loginForm.controls.percentage.hasError('required') && loginForm.controls.percentage.touched">
+                                percentage is <strong>required</strong>
+                            </mat-error>
                         </td>
                     </tr>
                 </table>
@@ -50,7 +94,7 @@
             <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button (click)="login()" [disabled] = "!loginForm.valid" color="primary">Login</button>
+            <button mat-raised-button style="margin-left: 35%;" (click)="login()" [disabled]="!loginForm.valid" color="primary">Login</button>
         </mat-card-actions>
     </mat-card>
 </div>
