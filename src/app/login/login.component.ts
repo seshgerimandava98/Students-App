@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.formBuilder.group({
       name: ['', [Validators.maxLength(20), Validators.pattern('[a-zA-Z][a-zA-Z ]+[a-zA-Z]$')]],
       lastName: ['', [Validators.maxLength(20), Validators.pattern('[a-zA-Z][a-zA-Z ]+[a-zA-Z]$')]],
-      class: ['', [Validators.pattern('^[a-zA-Z0-9]{3,5}$')]],
+      class: ['', [Validators.pattern('^[a-zA-Z0-9]{2,5}$')]],
       year: ['', [Validators.pattern('[0-9]+'), this.rangeValidator]],
       percentage: ['', Validators.pattern('[0-9]+')]
     });
